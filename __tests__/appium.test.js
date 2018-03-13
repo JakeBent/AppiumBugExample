@@ -15,12 +15,12 @@ const iosConfig = {
   platformName: 'iOS',
   deviceName: 'iPhone Simulator',
   automationName: 'XCUITest',
-  app: '/Users/bentonj/Code/AppiumBugExample/ios/build/Build/Products/Debug-iphonesimulator/Lifion.app',
+  app: 'path/to.app',
 };
 const driver = wd.promiseChainRemote('localhost', PORT);
 
 beforeAll(async () => {
-  await driver.init(iosConfig);
+  await driver.init(androidConfig);
   await driver.sleep(2000); // wait for app to load
 })
 
